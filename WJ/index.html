@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>共同清潔紀錄</title>
+    <style type = "text/css">
+      html{
+        font-size: 14vmin;
+        text-align:center;
+      }
+      .rwdtxt {
+        font-size: 8vmin;
+        color:green;
+        text-align:center;
+      }
+      @media (min-width: 1000px) and (max-width: 1200px) {
+        .rwdtxt {
+        font-size: calc(10vmin + (10-9) * ((100vw - 600px) / (1200 - 600)));
+        color:blue;
+        text-align:center;
+        }
+      }
+      @media (min-width: 1200px) {
+        .rwdtxt {
+          font-size: 14vmin;
+          color:red;
+          text-align:center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'/>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <p class="rwdtxt">
+      王永洲.楊美玉共同清潔紀錄
+    </p>
+    <link href="C:\Users\ghmmy\OneDrive\桌面\nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script><div id="nanogallery1"></div>
+    <script>
+      var photo = [];
+      for(i =1; i<118;i++){
+        photo.push({"src":`https://liff6.github.io/WJ/jpg/${i}.jpg`,"srct":`https://liff6.github.io/WJ/low/${i}.jpg`,"title":`${i}`});
+      }
+     $("#nanogallery1").nanogallery2({
+      thumbnailHeight: 200,
+      thumbnailWidth: "auto",
+      galleryLastRowFull: true,
+      items: photo
+     });
+    </script><br />
+  </body>
 
+</html>
